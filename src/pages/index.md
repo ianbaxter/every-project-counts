@@ -1,9 +1,9 @@
 ---
 templateKey: index-page
-title: Great coffee with a conscience
-image: /img/home-jumbotron.jpg
-heading: Great coffee with a conscience
-subheading: Support sustainable farming while enjoying a cup
+title: Research And Development Day 2020
+image: /img/conference.jpg
+heading: Research And Development Day 2020
+subheading: North West Foundation
 mainpitch:
   title: Why Kaldi
   description: >
