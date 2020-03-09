@@ -2,7 +2,6 @@ import React from "react";
 import PropTypes from "prop-types";
 import { graphql } from "gatsby";
 import Layout from "../components/Layout";
-import Features from "../components/Features";
 import PreviewCompatibleImage from "../components/PreviewCompatibleImage";
 
 export const ProductPageTemplate = ({
@@ -10,9 +9,7 @@ export const ProductPageTemplate = ({
   title,
   heading,
   description,
-  intro,
-  main,
-  fullImage
+  main
 }) => (
   <div className="content">
     <div
@@ -78,15 +75,10 @@ ProductPageTemplate.propTypes = {
   title: PropTypes.string,
   heading: PropTypes.string,
   description: PropTypes.string,
-  intro: PropTypes.shape({
-    blurbs: PropTypes.array
-  }),
   main: PropTypes.shape({
     heading: PropTypes.string,
     description: PropTypes.string,
-    image1: PropTypes.oneOfType([PropTypes.object, PropTypes.string]),
-    image2: PropTypes.oneOfType([PropTypes.object, PropTypes.string]),
-    image3: PropTypes.oneOfType([PropTypes.object, PropTypes.string])
+    image1: PropTypes.oneOfType([PropTypes.object, PropTypes.string])
   })
 };
 
@@ -100,9 +92,7 @@ const ProductPage = ({ data }) => {
         title={frontmatter.title}
         heading={frontmatter.heading}
         description={frontmatter.description}
-        intro={frontmatter.intro}
         main={frontmatter.main}
-        fullImage={frontmatter.full_image}
       />
     </Layout>
   );

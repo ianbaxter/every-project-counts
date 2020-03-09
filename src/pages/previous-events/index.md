@@ -1,6 +1,6 @@
 ---
-templateKey: "products-page"
-path: /products-page
+templateKey: "previous-events-page"
+path: /previous-events-page
 title: Previous Events
 image: /img/conference.jpg
 heading: Every Project Counts

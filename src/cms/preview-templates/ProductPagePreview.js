@@ -1,6 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
-import { ProductPageTemplate } from "../../templates/products-page";
+import { ProductPageTemplate } from "../../templates/previous-events-page";
 
 const ProductPagePreview = ({ entry, getAsset }) => {
   return (

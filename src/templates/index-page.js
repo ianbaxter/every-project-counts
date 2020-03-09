@@ -3,7 +3,6 @@ import PropTypes from "prop-types";
 import { Link, graphql } from "gatsby";
 
 import Layout from "../components/Layout";
-import Features from "../components/Features";
 import BlogRoll from "../components/BlogRoll";
 
 export const IndexPageTemplate = ({
@@ -12,8 +11,7 @@ export const IndexPageTemplate = ({
   heading,
   subheading,
   mainpitch,
-  description,
-  intro
+  description
 }) => (
   <div>
     <div
@@ -84,10 +82,9 @@ export const IndexPageTemplate = ({
                     <p>{description}</p>
                   </div>
                 </div>
-                <Features gridItems={intro.blurbs} />
                 <div className="columns">
                   <div className="column is-12 has-text-centered">
-                    <Link className="btn" to="/products">
+                    <Link className="btn" to="/previous-events">
                       Previous Events
                     </Link>
                   </div>
@@ -118,10 +115,7 @@ IndexPageTemplate.propTypes = {
   heading: PropTypes.string,
   subheading: PropTypes.string,
   mainpitch: PropTypes.object,
-  description: PropTypes.string,
-  intro: PropTypes.shape({
-    blurbs: PropTypes.array
-  })
+  description: PropTypes.string
 };
 
 const IndexPage = ({ data }) => {
@@ -136,7 +130,6 @@ const IndexPage = ({ data }) => {
         subheading={frontmatter.subheading}
         mainpitch={frontmatter.mainpitch}
         description={frontmatter.description}
-        intro={frontmatter.intro}
       />
     </Layout>
   );
@@ -167,23 +160,10 @@ export const pageQuery = graphql`
         heading
         subheading
         mainpitch {
+          title
           description
         }
         description
-        intro {
-          blurbs {
-            image {
-              childImageSharp {
-                fluid(maxWidth: 240, quality: 64) {
-                  ...GatsbyImageSharpFluid
-                }
-              }
-            }
-            text
-          }
-          heading
-          description
-        }
       }
     }
   }
