@@ -1,7 +1,7 @@
 module.exports = {
   siteMetadata: {
     title: "Every Project Counts",
-    description: "Every Project Counts."
+    description: "North West Foundation Doctors Research and Development Day."
   },
   plugins: [
     "gatsby-plugin-react-helmet",

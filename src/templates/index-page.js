@@ -79,6 +79,14 @@ export const IndexPageTemplate = ({
                       {heading}
                     </h3>
                     <p>{description}</p>
+                    <p>The day includes:</p>
+                    <ul>
+                      <li>Poster and oral presentations</li>
+                      <li>Exciting talks</li>
+                      <li>Networking opportunities</li>
+                      <li>Prizes for the best projects</li>
+                      <li>Free tea, coffee and lunch</li>
+                    </ul>
                   </div>
                 </div>
                 <div>

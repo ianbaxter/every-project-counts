@@ -8,10 +8,10 @@ description: >-
   This research and development day has been running since 2018. Beginning with 3 foundations doctors based at Manchester Royal Infirmary. It has continued to expand across the North West; this year with support and funding from Health Education North West.
 
 main:
-  heading: Commodo do dolor cillum ullamco.
+  heading: Our event in 2019
   description: >
-    Laborum aute fugiat esse nostrud sunt. Amet deserunt nulla fugiat aliqua sint velit id cillum nisi ad reprehenderit. Dolor nostrud eiusmod exercitation reprehenderit Lorem cillum est labore magna occaecat. Enim sit reprehenderit est et sunt. Elit qui quis sint sit do culpa esse ullamco ut quis ad ut. Ex cillum do anim laboris mollit enim proident deserunt minim.
+    Our event in 2019 was hosted in Manchester Royal Infirmary's Postgraduate Centre and hosted 100 delegates from areas all across the North West of England. There were 47 posters presented and 5 oral presentations.
   image1:
-    alt: A close-up of a paper filter filled with ground coffee
-    image: /img/conference.jpg
+    alt: A picture of mark in front of his poster
+    image: /img/epc_mark_about.jpg
 ---
