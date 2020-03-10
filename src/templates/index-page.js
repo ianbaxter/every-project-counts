@@ -95,7 +95,7 @@ export const IndexPageTemplate = ({
                     height="450"
                     frameborder="0"
                     style={{ border: "0" }}
-                    src="https://www.google.com/maps/embed/v1/place?q=place_id:ChIJ2ZyMN5Oxe0gR3Q7jq7ol9_8&key=AIzaSyAcBUdidFb-afek_8Lcd0MByBhS6w6YtR4"
+                    src={process.env.GATSBY_GOOGLE_MAPS_API_KEY}
                     allowfullscreen
                   ></iframe>
                 </div>
