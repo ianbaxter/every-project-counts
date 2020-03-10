@@ -9,13 +9,13 @@ mainpitch:
   description: >
     A regional conference set in the North West for foundation doctors to present projects, be inspired by others and network.
 description: >-
-  An opportunity to celebrate projects completed by foundation doctors, across the North West of England, in patient safety, quality improvement and original research.
-         The day includes;
+  An opportunity to celebrate projects completed by foundation doctors, across the North West of England, in patient safety, quality improvement and original research. 
+  The day includes:
            -	Poster and oral presentations,
            -	Exciting talks led by experts in the field,
-           *	Networking opportunities,
-           *	Prizes for the best projects,
-           *	Free tea, coffee and lunch.
+           -	Networking opportunities,
+           -	Prizes for the best projects,
+           -	Free tea, coffee and lunch.
 
 main:
   heading: About Us
