@@ -43,7 +43,7 @@
     "develop": "npm run clean && gatsby develop",
     "format": "prettier --trailing-comma es5 --no-semi --single-quote --write \"{gatsby-*.js,src/**/*.js}\"",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "lambda-build": "netlify-lambda build functions && node -p 'process.env'"
+    "lambda-build": "build functions && node -p 'process.env'"
   },
   "devDependencies": {
     "prettier": "^1.15.3"
