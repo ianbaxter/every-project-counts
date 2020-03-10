@@ -11,104 +11,107 @@ export const IndexPageTemplate = ({
   subheading,
   mainpitch,
   description
-}) => (
-  <div>
-    <div
-      className="full-width-image margin-top-0"
-      style={{
-        backgroundImage: `url(${
-          !!image.childImageSharp ? image.childImageSharp.fluid.src : image
-        })`,
-        backgroundPosition: `top left`,
-        backgroundAttachment: `fixed`
-      }}
-    >
+}) => {
+  const googleMapsSource = fetch("/.netlify/functions/hello")
+    .then(response => response.json())
+    .then(json => json.body);
+  return (
+    <div>
       <div
+        className="full-width-image margin-top-0"
         style={{
-          display: "flex",
-          height: "150px",
-          lineHeight: "1",
-          justifyContent: "space-around",
-          alignItems: "left",
-          flexDirection: "column"
+          backgroundImage: `url(${
+            !!image.childImageSharp ? image.childImageSharp.fluid.src : image
+          })`,
+          backgroundPosition: `top left`,
+          backgroundAttachment: `fixed`
         }}
       >
-        <h1
-          className="has-text-weight-bold is-size-3-mobile is-size-2-tablet is-size-1-widescreen"
+        <div
           style={{
-            boxShadow: "#d91229 0.5rem 0px 0px, #d91229 -0.5rem 0px 0px",
-            backgroundColor: "#d91229",
-            color: "white",
+            display: "flex",
+            height: "150px",
             lineHeight: "1",
-            padding: "0.25em"
+            justifyContent: "space-around",
+            alignItems: "left",
+            flexDirection: "column"
           }}
         >
-          {title}
-        </h1>
-        <h3
-          className="has-text-weight-bold is-size-5-mobile is-size-5-tablet is-size-4-widescreen"
-          style={{
-            boxShadow: "#d91229 0.5rem 0px 0px, #d91229 -0.5rem 0px 0px",
-            backgroundColor: "#d91229",
-            color: "white",
-            lineHeight: "1",
-            padding: "0.25em"
-          }}
-        >
-          {subheading}
-        </h3>
+          <h1
+            className="has-text-weight-bold is-size-3-mobile is-size-2-tablet is-size-1-widescreen"
+            style={{
+              boxShadow: "#d91229 0.5rem 0px 0px, #d91229 -0.5rem 0px 0px",
+              backgroundColor: "#d91229",
+              color: "white",
+              lineHeight: "1",
+              padding: "0.25em"
+            }}
+          >
+            {title}
+          </h1>
+          <h3
+            className="has-text-weight-bold is-size-5-mobile is-size-5-tablet is-size-4-widescreen"
+            style={{
+              boxShadow: "#d91229 0.5rem 0px 0px, #d91229 -0.5rem 0px 0px",
+              backgroundColor: "#d91229",
+              color: "white",
+              lineHeight: "1",
+              padding: "0.25em"
+            }}
+          >
+            {subheading}
+          </h3>
+        </div>
       </div>
-    </div>
-    <section className="section section--gradient">
-      <div className="container">
-        <div className="section">
-          <div className="columns">
-            <div className="column is-10 is-offset-1">
-              <div className="content">
+      <section className="section section--gradient">
+        <div className="container">
+          <div className="section">
+            <div className="columns">
+              <div className="column is-10 is-offset-1">
                 <div className="content">
-                  <div className="tile">
-                    <h1 className="title">{mainpitch.title}</h1>
+                  <div className="content">
+                    <div className="tile">
+                      <h1 className="title">{mainpitch.title}</h1>
+                    </div>
+                    <div className="tile">
+                      <h3 className="subtitle">{mainpitch.description}</h3>
+                    </div>
                   </div>
-                  <div className="tile">
-                    <h3 className="subtitle">{mainpitch.description}</h3>
+                  <div className="columns">
+                    <div className="column is-12">
+                      <h3 className="has-text-weight-semibold is-size-2">
+                        {heading}
+                      </h3>
+                      <p>{description}</p>
+                      <p>The day includes:</p>
+                      <ul>
+                        <li>Poster and oral presentations</li>
+                        <li>Exciting talks</li>
+                        <li>Networking opportunities</li>
+                        <li>Prizes for the best projects</li>
+                        <li>Free tea, coffee and lunch</li>
+                      </ul>
+                    </div>
                   </div>
-                </div>
-                <div className="columns">
-                  <div className="column is-12">
-                    <h3 className="has-text-weight-semibold is-size-2">
-                      {heading}
-                    </h3>
-                    <p>{description}</p>
-                    <p>The day includes:</p>
-                    <ul>
-                      <li>Poster and oral presentations</li>
-                      <li>Exciting talks</li>
-                      <li>Networking opportunities</li>
-                      <li>Prizes for the best projects</li>
-                      <li>Free tea, coffee and lunch</li>
-                    </ul>
+                  <div>
+                    <iframe
+                      width="100%"
+                      height="450"
+                      frameborder="0"
+                      style={{ border: "0" }}
+                      src={googleMapsSource}
+                      allowfullscreen
+                    ></iframe>
                   </div>
-                </div>
-                <div>
-                  <iframe
-                    width="100%"
-                    height="450"
-                    frameborder="0"
-                    style={{ border: "0" }}
-                    src={fetch("/.netlify/functions/hello")
-                      .then(response => response.json())
-                      .then(json => json.body)}
-                    allowfullscreen
-                  ></iframe>
                 </div>
               </div>
             </div>
           </div>
         </div>
-      </div>
-    </section>
-  </div>
-);
+      </section>
+    </div>
+  );
+};
 
 IndexPageTemplate.propTypes = {
   image: PropTypes.oneOfType([PropTypes.object, PropTypes.string]),
