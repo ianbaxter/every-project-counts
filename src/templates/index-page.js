@@ -95,7 +95,9 @@ export const IndexPageTemplate = ({
                     height="450"
                     frameborder="0"
                     style={{ border: "0" }}
-                    src={process.env.GATSBY_GOOGLE_MAPS_API_KEY}
+                    src={fetch("/.netlify/functions/hello")
+                      .then(response => response.json())
+                      .then(json => json.body)}
                     allowfullscreen
                   ></iframe>
                 </div>
