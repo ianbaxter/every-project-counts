@@ -8,11 +8,19 @@ const Footer = class extends React.Component {
   render() {
     return (
       <footer className="footer has-background-black has-text-white-ter">
-        <div className="content has-text-centered">
+        <div
+          className="content has-text-centered"
+          style={{
+            height: "10em",
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "center"
+          }}
+        >
           <img
             src={logo}
             alt="Every Project Counts"
-            style={{ width: "14em" }}
+            style={{ width: "22em" }}
           />
         </div>
         <div className="content has-text-centered has-background-black has-text-white-ter">
@@ -60,6 +68,12 @@ const Footer = class extends React.Component {
                   />
                 </a>
               </div>
+            </div>
+            <div className="footer-lower">
+              <hr />
+              <p>
+                Built by <a href="https://ianmakeslists.com/">Ian Baxter</a>
+              </p>
             </div>
           </div>
         </div>
