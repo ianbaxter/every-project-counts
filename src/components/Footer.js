@@ -14,7 +14,8 @@ const Footer = class extends React.Component {
             height: "10em",
             display: "flex",
             alignItems: "center",
-            justifyContent: "center"
+            justifyContent: "center",
+            margin: "0 2em"
           }}
         >
           <img
