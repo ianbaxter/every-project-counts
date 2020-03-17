@@ -3,8 +3,14 @@ import PropTypes from "prop-types";
 import { graphql } from "gatsby";
 import Layout from "../components/Layout";
 import Content, { HTMLContent } from "../components/Content";
+import PreviewCompatibleImage from "../components/PreviewCompatibleImage";
 
-export const AboutPageTemplate = ({ title, content, contentComponent }) => {
+export const AboutPageTemplate = ({
+  title,
+  content,
+  contentComponent,
+  main
+}) => {
   const PageContent = contentComponent || Content;
 
   return (
@@ -17,6 +23,15 @@ export const AboutPageTemplate = ({ title, content, contentComponent }) => {
                 {title}
               </h2>
               <PageContent className="content" content={content} />
+              <div className="tile is-ancestor">
+                <div className="tile is-vertical">
+                  <div className="tile is-parent">
+                    <article className="tile is-child">
+                      <PreviewCompatibleImage imageInfo={main.image1} />
+                    </article>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -28,7 +43,10 @@ export const AboutPageTemplate = ({ title, content, contentComponent }) => {
 AboutPageTemplate.propTypes = {
   title: PropTypes.string.isRequired,
   content: PropTypes.string,
-  contentComponent: PropTypes.func
+  contentComponent: PropTypes.func,
+  main: PropTypes.shape({
+    image1: PropTypes.oneOfType([PropTypes.object, PropTypes.string])
+  })
 };
 
 const AboutPage = ({ data }) => {
@@ -39,6 +57,7 @@ const AboutPage = ({ data }) => {
       <AboutPageTemplate
         contentComponent={HTMLContent}
         title={post.frontmatter.title}
+        main={post.frontmatter.main}
         content={post.html}
       />
     </Layout>
@@ -57,6 +76,18 @@ export const aboutPageQuery = graphql`
       html
       frontmatter {
         title
+        main {
+          image1 {
+            alt
+            image {
+              childImageSharp {
+                fluid(maxWidth: 526, quality: 92) {
+                  ...GatsbyImageSharpFluid
+                }
+              }
+            }
+          }
+        }
       }
     }
   }

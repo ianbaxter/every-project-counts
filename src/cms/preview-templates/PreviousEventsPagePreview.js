@@ -1,10 +1,10 @@
 import React from "react";
 import PropTypes from "prop-types";
-import { ProductPageTemplate } from "../../templates/previous-events-page";
+import { PreviousEventsPageTemplate } from "../../templates/previous-events-page";
 
-const ProductPagePreview = ({ entry, getAsset }) => {
+const PreviousEventsPagePreview = ({ entry, getAsset }) => {
   return (
-    <ProductPageTemplate
+    <PreviousEventsPageTemplate
       image={getAsset(entry.getIn(["data", "image"]))}
       title={entry.getIn(["data", "title"])}
       heading={entry.getIn(["data", "heading"])}
@@ -15,17 +15,25 @@ const ProductPagePreview = ({ entry, getAsset }) => {
         image1: {
           image: getAsset(entry.getIn(["data", "main", "image1", "image"])),
           alt: entry.getIn(["data", "main", "image1", "alt"])
+        },
+        image2: {
+          image: getAsset(entry.getIn(["data", "main", "image2", "image"])),
+          alt: entry.getIn(["data", "main", "image2", "alt"])
+        },
+        image3: {
+          image: getAsset(entry.getIn(["data", "main", "image3", "image"])),
+          alt: entry.getIn(["data", "main", "image3", "alt"])
         }
       }}
     />
   );
 };
 
-ProductPagePreview.propTypes = {
+PreviousEventsPagePreview.propTypes = {
   entry: PropTypes.shape({
     getIn: PropTypes.func
   }),
   getAsset: PropTypes.func
 };
 
-export default ProductPagePreview;
+export default PreviousEventsPagePreview;

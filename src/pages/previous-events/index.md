@@ -12,6 +12,12 @@ main:
   description: >
     Our event in 2019 was hosted in Manchester Royal Infirmary's Postgraduate Centre and hosted 100 delegates from areas all across the North West of England. There were 47 posters presented and 5 oral presentations.
   image1:
-    alt: A picture of mark in front of his poster
-    image: /img/epc_mark_about.jpg
+    alt: Winner of best poster
+    image: /img/epc_2019_best_poster_winner.jpg
+  image2:
+    alt: Winner of best presentation
+    image: /img/epc_2019_best_presentation_winner.jpg
+  image3:
+    alt: Participants amongst the posters
+    image: /img/epc_2019_posters.png
 ---

@@ -4,7 +4,7 @@ import { graphql } from "gatsby";
 import Layout from "../components/Layout";
 import PreviewCompatibleImage from "../components/PreviewCompatibleImage";
 
-export const ProductPageTemplate = ({
+export const PreviousEventsPageTemplate = ({
   image,
   title,
   heading,
@@ -59,6 +59,16 @@ export const ProductPageTemplate = ({
                         <PreviewCompatibleImage imageInfo={main.image1} />
                       </article>
                     </div>
+                    <div className="tile is-parent">
+                      <article className="tile is-child">
+                        <PreviewCompatibleImage imageInfo={main.image2} />
+                      </article>
+                    </div>
+                  </div>
+                  <div className="tile is-parent">
+                    <article className="tile is-child">
+                      <PreviewCompatibleImage imageInfo={main.image3} />
+                    </article>
                   </div>
                 </div>
               </div>
@@ -70,7 +80,7 @@ export const ProductPageTemplate = ({
   </div>
 );
 
-ProductPageTemplate.propTypes = {
+PreviousEventsPageTemplate.propTypes = {
   image: PropTypes.oneOfType([PropTypes.object, PropTypes.string]),
   title: PropTypes.string,
   heading: PropTypes.string,
@@ -82,12 +92,12 @@ ProductPageTemplate.propTypes = {
   })
 };
 
-const ProductPage = ({ data }) => {
+const PreviousEventsPage = ({ data }) => {
   const { frontmatter } = data.markdownRemark;
 
   return (
     <Layout>
-      <ProductPageTemplate
+      <PreviousEventsPageTemplate
         image={frontmatter.image}
         title={frontmatter.title}
         heading={frontmatter.heading}
@@ -98,7 +108,7 @@ const ProductPage = ({ data }) => {
   );
 };
 
-ProductPage.propTypes = {
+PreviousEventsPage.propTypes = {
   data: PropTypes.shape({
     markdownRemark: PropTypes.shape({
       frontmatter: PropTypes.object
@@ -106,10 +116,10 @@ ProductPage.propTypes = {
   })
 };
 
-export default ProductPage;
+export default PreviousEventsPage;
 
-export const productPageQuery = graphql`
-  query ProductPage($id: String!) {
+export const previousEventsPageQuery = graphql`
+  query PreviousEventsPage($id: String!) {
     markdownRemark(id: { eq: $id }) {
       frontmatter {
         title
@@ -126,6 +136,26 @@ export const productPageQuery = graphql`
           heading
           description
           image1 {
+            alt
+            image {
+              childImageSharp {
+                fluid(maxWidth: 526, quality: 92) {
+                  ...GatsbyImageSharpFluid
+                }
+              }
+            }
+          }
+          image2 {
+            alt
+            image {
+              childImageSharp {
+                fluid(maxWidth: 526, quality: 92) {
+                  ...GatsbyImageSharpFluid
+                }
+              }
+            }
+          }
+          image3 {
             alt
             image {
               childImageSharp {

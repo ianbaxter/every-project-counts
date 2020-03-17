@@ -1,6 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
-import { Link, graphql } from "gatsby";
+import { graphql } from "gatsby";
 
 import Layout from "../components/Layout";
 
@@ -91,6 +91,7 @@ export const IndexPageTemplate = ({
                 </div>
                 <div>
                   <iframe
+                    title="google maps"
                     width="100%"
                     height="450"
                     frameborder="0"
