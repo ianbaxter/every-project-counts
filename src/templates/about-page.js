@@ -23,14 +23,8 @@ export const AboutPageTemplate = ({
                 {title}
               </h2>
               <PageContent className="content" content={content} />
-              <div className="tile is-ancestor">
-                <div className="tile is-vertical">
-                  <div className="tile is-parent">
-                    <article className="tile is-child">
-                      <PreviewCompatibleImage imageInfo={main.image1} />
-                    </article>
-                  </div>
-                </div>
+              <div style={{ maxWidth: "355px" }}>
+                <PreviewCompatibleImage imageInfo={main.image1} />
               </div>
             </div>
           </div>

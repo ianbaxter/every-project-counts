@@ -6,7 +6,7 @@ title: About us
 main:
   image1:
     alt: Participants at the presentation
-    image: /img/epc_2019_lecture.jpg
+    image: /img/henw-logo.png
 ---
 
 The committee is currently based at Central Manchester Foundation Trust, with close support from our foundation program team. Currently we are being supported by Health Education North West.

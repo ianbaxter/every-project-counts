@@ -1,7 +1,7 @@
 ---
 templateKey: index-page
 title: Research And Development Day 2020
-image: /img/conference.jpg
+image: /img/epc_2019_lecture.jpg
 heading: 18th June 2020 8am-1pm at Kings House Conference Centre
 subheading: North West Foundation School
 mainpitch:

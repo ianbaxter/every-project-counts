@@ -2,7 +2,7 @@
 templateKey: "previous-events-page"
 path: /previous-events-page
 title: Previous Events
-image: /img/conference.jpg
+image: /img/epc_2019_lecture.jpg
 heading: Every Project Counts
 description: >-
   This research and development day has been running since 2018. Beginning with 3 foundations doctors based at Manchester Royal Infirmary. It has continued to expand across the North West; this year with support and funding from Health Education North West.
