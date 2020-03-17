@@ -3,7 +3,7 @@ templateKey: blog-post
 title: Working together with PIPs
 date: 2020-03-09T14:50:10.000Z
 featuredpost: false
-featuredimage: /img/conference.jpg
+featuredimage: /img/epc_2019_lecture.jpg
 description: Consequat eu voluptate elit id elit dolor qui reprehenderit voluptate ullamco aliqua eiusmod esse.
 tags:
   - pips

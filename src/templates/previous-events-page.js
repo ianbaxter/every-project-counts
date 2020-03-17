@@ -13,11 +13,13 @@ export const PreviousEventsPageTemplate = ({
 }) => (
   <div className="content">
     <div
-      className="full-width-image-container margin-top-0"
+      className="full-width-image margin-top-0"
       style={{
         backgroundImage: `url(${
           !!image.childImageSharp ? image.childImageSharp.fluid.src : image
-        })`
+        })`,
+        backgroundPosition: `bottom left`,
+        backgroundAttachment: `fixed`
       }}
     >
       <h2
@@ -159,7 +161,7 @@ export const previousEventsPageQuery = graphql`
             alt
             image {
               childImageSharp {
-                fluid(maxWidth: 526, quality: 92) {
+                fluid(maxWidth: 1052, quality: 92) {
                   ...GatsbyImageSharpFluid
                 }
               }
