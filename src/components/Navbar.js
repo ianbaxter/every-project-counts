@@ -7,7 +7,7 @@ const Navbar = class extends React.Component {
     super(props);
     this.state = {
       active: false,
-      navBarActiveClass: ""
+      navBarActiveClass: "",
     };
   }
 
@@ -15,17 +15,17 @@ const Navbar = class extends React.Component {
     // toggle the active boolean in the state
     this.setState(
       {
-        active: !this.state.active
+        active: !this.state.active,
       },
       // after state has been updated,
       () => {
         // set the class in state for the navbar accordingly
         this.state.active
           ? this.setState({
-              navBarActiveClass: "is-active"
+              navBarActiveClass: "is-active",
             })
           : this.setState({
-              navBarActiveClass: ""
+              navBarActiveClass: "",
             });
       }
     );
@@ -38,6 +38,7 @@ const Navbar = class extends React.Component {
         role="navigation"
         aria-label="main-navigation"
       >
+        <p className="covid">Coronavirus (COVID-19): Event postponed</p>
         <div className="container">
           <div className="navbar-brand">
             <Link to="/" className="navbar-item" title="Logo">

@@ -2,7 +2,7 @@
 templateKey: index-page
 title: Research And Development Day 2020
 image: /img/epc_2019_lecture.jpg
-heading: 18th June 2020 8am-1pm at Kings House Conference Centre
+heading: Event postponed due to Coronavirus (COVID-19). More details to follow.
 subheading: North West Foundation School
 mainpitch:
   title: Every Project Counts
